@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Meeting App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Video Meeting App</h1>
+            <div id="meeting-controls">
+                <button id="generate-link">Generate Link</button>
+                <input type="datetime-local" id="schedule-input">
+                <button id="schedule-button">Schedule</button>
+            </div>
+        </header>
+        <main>
+            <div id="video-container">
+                <video id="localVideo" autoplay muted></video>
+                <video id="remoteVideo" autoplay></video>
+            </div>
+            <div id="chat-section">
+                <div id="chat-messages"></div>
+                <input type="text" id="chat-input" placeholder="Type a message">
+                <button id="send-button">Send</button>
+            </div>
+            <div id="meeting-link-container" style="display: none;">
+                <input id="meeting-link" type="text" readonly>
+                <button id="copy-link-button">Copy Link</button>
+            </div>   
+        </main>
+        <footer>
+            <button id="start-meeting">Start Meeting</button>
+            <button id="end-meeting">End Meeting</button>
+            <button id="screen-share">Share Screen</button>
+            <button id="record-meeting">Record</button>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
